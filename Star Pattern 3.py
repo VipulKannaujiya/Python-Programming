@@ -6,7 +6,7 @@ while(i <= 5):
         j += 1
     k = 1
     while(k <= i):
-        print(" *", end="") # Star ke pahle ak space add karne se ye pyramid pattern ban jayega.
+        print("*", end="")
         k += 1
     print()
     i += 1 
