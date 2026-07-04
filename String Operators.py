@@ -276,17 +276,17 @@ print(id(x))  # Unique identifier of the list object
 print(id(y))  # Same unique identifier as x
 
 # 53. callable() - Checks if an object appears callable (i.e., can be called as a function).
-def my_function():
+def my_function_2():
     pass
 
-print(callable(my_function))  # True
+print(callable(my_function_2))  # True
 
 # 54. getattr() - Returns the value of a named attribute of an object. It can be used to access attributes dynamically.
-class MyClass:
+class MyClass1:
     def __init__(self):
         self.attribute = "Hello"
 
-obj = MyClass()
+obj = MyClass1()
 print(getattr(obj, "attribute"))  # "Hello"
 
 # 55. setattr() - Sets the value of a named attribute of an object. It can be used to modify attributes dynamically.
@@ -301,12 +301,12 @@ print(getattr(obj, "attribute"))  # AttributeError: 'MyClass' object has no attr
 print(hasattr(obj, "attribute"))  # False
 
 # 58. vars() - Returns the __dict__ attribute of an object, which is a dictionary containing the object's writable attributes.
-class MyClass:
+class MyClass2:
     def __init__(self):
         self.attribute1 = "Hello"
         self.attribute2 = "World"
 
-obj = MyClass()
+obj = MyClass2()
 print(vars(obj))  # {'attribute1': 'Hello', 'attribute2': 'World'}
 
 # 59. locals() - Returns a dictionary containing the current local symbol table. It can be used to inspect local variables.
@@ -332,7 +332,7 @@ child = Child()
 child.greet()
 
 # 62. property() - Returns a property attribute for a class. It can be used to define getter, setter, and deleter methods for an attribute.
-class MyClass:
+class MyClass3:
     def __init__(self):
         self._attribute = "Hello"
 
@@ -344,20 +344,20 @@ class MyClass:
     def attribute(self, value):
         self._attribute = value
 
-obj = MyClass()
+obj = MyClass3()
 print(obj.attribute)  # "Hello"
 obj.attribute = "World"
 print(obj.attribute)  # "World"
 
 # 63. classmethod() - Returns a class method for a class. It can be used to define methods that operate on the class itself rather than instances of the class.
-class MyClass:
+class MyClass4:
     class_variable = "Hello"
 
     @classmethod
     def class_method(cls):
         print(cls.class_variable)
     
-MyClass.class_method()  # "Hello"
+MyClass4.class_method()  # "Hello"
 
 # 64. staticmethod() - Returns a static method for a class. It can be used to define methods that do not operate on instances or the class itself.
 class MyClass:
