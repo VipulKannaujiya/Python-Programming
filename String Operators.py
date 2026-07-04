@@ -369,3 +369,74 @@ MyClass.static_method()  # "Hello from static method"
 
 
 # ------------------------------------------- Code Execution / import -----------------------------------------------
+
+# 65. eval() - Evaluates a string as a Python expression and returns the result. It can be used to execute dynamic code.
+print(eval("2 + 3"))  # 5
+
+# 66. exec() - Executes a string as Python code. It can be used to execute dynamic code.
+code = "x = 5\n print(x)"
+exec(code)  # 5
+
+# 67. compile() - Compiles a string of Python code into a code object that can be executed by exec() or eval().
+code = "x = 4\nprint(x)"
+compiled_code = compile(code, "<string>", "exec")
+exec(compiled_code)  # 4
+
+# 68. import() - Dynamically imports a module or package. It can be used to load modules at runtime.
+# Note: The import() function is not a built-in function in Python. Instead, you can use the importlib module to achieve dynamic imports.
+import importlib
+math = __import__('math')
+print(math.sqrt(16))  # 4.0
+
+# ------------------------------------------ String Built-in Functions -----------------------------------------------
+
+# 69. len() - Returns the length of a string (number of characters).
+string = "Vipul Kannaujiya"
+print(len(string))  # 17
+
+# 70. capitalize() - Returns a copy of the string with the first character capitalized and the rest lowercased.
+string = "vipul kannaujiya"
+print(string.capitalize())  # "Vipul kannaujiya"
+
+# 71. find() - Returns the lowest index of the substring if found in the string. If not found, it returns -1.
+string = "Vipul Kannaujiya"
+print(string.find("Kannaujiya"))  # 6
+print(string.find("xyz"))  # -1
+
+# 72. isalnum() - Returns True if all characters in the string are alphanumeric (letters and numbers) and there is at least one character. Otherwise, it returns False.
+string = "Vipul123"
+print(string.isalnum())  # True
+
+# 73. isdigit() - Returns True if all characters in the string are digits and there is at least one character. Otherwise, it returns False.
+string = "12345"
+print(string.isdigit())  # True
+
+# 74. isspace() - Returns True if all characters in the string are whitespace and there is at least one character. Otherwise, it returns False.
+string = "   "
+print(string.isspace())  # True
+
+# 75. islower() - Returns True if all characters in the string are lowercase and there is at least one character. Otherwise, it returns False.
+string = "vipul"
+print(string.islower())  # True
+
+# 76. isupper() - Returns True if all characters in the string are uppercase and there is at least one character. Otherwise, it returns False.
+string = "VIPUL"
+print(string.isupper())  # True
+
+# 77. isalpha() - Returns True if all characters in the string are alphabetic and there is at least one character. Otherwise, it returns False.
+string = "Vipul"
+print(string.isalpha())  # True
+
+# 78. isidentifier() - Returns True if the string is a valid identifier according to Python's rules. Otherwise, it returns False.
+string = "Vipul"
+print(string.isidentifier())  # True
+
+# 79. isprintable() - Returns True if all characters in the string are printable or the string is empty. Otherwise, it returns False.
+string = "Vipul"
+print(string.isprintable())  # True
+
+# 80. istitle() - Returns True if the string is in title case (i.e., each word starts with an uppercase letter followed by lowercase letters). Otherwise, it returns False.
+string = "Vipul Kannaujiya"
+
+
+# ---------------------------------------- END STRING OPERATORS --------------------------------------------------
