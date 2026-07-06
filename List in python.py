@@ -36,3 +36,30 @@ print(a[-2])
 print(a[-1])
 
 # ---------------------------------------- Various list operations in python ------------------------------------
+
+# Updating list in python
+
+a = ["Ram", 1, "shyam", 12.5]
+print(a[1])
+a[1] = "Ramesh"
+print(a[1])
+
+# Deleting list in python
+
+a = ["Ram", 1, "shyam", 12.5]
+print(a)
+del a[1]
+print(a)
+
+# List traversal in python
+
+a = ["Ram", 1, "shyam", 12.5]
+# first way
+for i in a:
+    print(i)
+
+# second way
+for i in range(len(a)):
+    print(a[i])
+
+
